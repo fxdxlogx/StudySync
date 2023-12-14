@@ -19,7 +19,7 @@
 	box-sizing: border-box;
 	font-family: 'Inter', sans-serif;
 	text-decoration: none;
-/*	border: 1px red solid;*/
+	/* border: 1px red solid; */
 
 }
 
@@ -51,6 +51,8 @@ body{
 .logo-icon{
 	height: 3.875rem;
 	width: 1.938rem;
+	rotate: -45deg;
+	scale: 0.95;
 }
 
 .logo-text{
@@ -69,6 +71,9 @@ body{
 	font-size: 1.125rem;
 	font-weight: bold;
 	transition: color 0.1s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .nav-link:hover{
@@ -109,6 +114,102 @@ padding: 0.5rem 1rem;
 }
 
 
+.main-section{
+	max-width: 80vw;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 0.6rem;
+	margin: 0 auto;
+}
+
+.content-left{
+	text-align: center;
+	animation: slideFromLeft 1s ease forwards;
+	opacity: 0;
+}
+@keyframes slideFromLeft {
+	from{
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.section-label{
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: var(--primary-color);
+}
+
+.section-title{
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--text-color);
+	padding: 1rem;
+}
+
+.section-description{
+	color: var(--grey);
+	font-size: 1.1rem;
+}
+
+.button-group{
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+.start-button,.tour-button{
+	border: none;
+	border-radius: 0.375rem;
+	background-color:  var(--primary-color);
+	color: var(--background-color);
+	transition: all 0.1s;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.tour-button{
+	background-color: var(--dark-grey);
+}
+
+.start-button:hover{
+	background-color: #5254f8;
+}
+
+.tour-button:hover{
+	background-color: var(--grey);
+}
+
+.content-right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-container{
+	border-radius: 1.625rem;
+	overflow: hidden;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	height: 50vh;
+}
+
+.section-image{
+	height: 100%;
+	width: 100%;
+	
+}
+
+
+
+
 @media (width>951px){
 	.nav{
 		display: flex;
@@ -122,4 +223,33 @@ padding: 0.5rem 1rem;
 	display: none;
 	}
 
+	.main-section{
+		flex-direction: row;
+	}
+
+	.content-left{
+		max-width: 50%;
+		text-align: left;
+	}
+
+	.section-title{
+		padding-left: 0;
+	}
+
+	.button-group{
+		justify-content: start;
+		padding-left: 0;
+	}
+
+	.section-label{
+		font-size: 1rem;
+	}
+
+}
+
+
+
+
+body{
+	background-color: rgba(89, 89, 89, 0.965);
 }
