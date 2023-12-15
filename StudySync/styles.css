@@ -198,7 +198,7 @@ padding: 0.5rem 1rem;
 	border-radius: 1.625rem;
 	overflow: hidden;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-	height: 50vh;
+	height: 55vh;
 }
 
 .section-image{
@@ -206,6 +206,64 @@ padding: 0.5rem 1rem;
 	width: 100%;
 	
 }
+
+.company-cotainer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem;
+	animation: slideFromLeft 1s ease forwards;
+}
+
+.company-grid{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 3.5rem;
+	padding: 1.1rem 2rem;
+	background-color: var(--light-grey);
+	border:none;
+	border-radius: 0.625rem;
+}
+
+.company-logo{
+	font-size: 1rem;
+	font-weight: 500;
+	color: var(--dark-grey);
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.svg-img{
+	height: 1.2rem;
+	width: auto;
+}
+
+.logo-text{
+	font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -234,6 +292,13 @@ padding: 0.5rem 1rem;
 
 	.section-title{
 		padding-left: 0;
+		font-size: 2.2rem;
+	}
+
+	.section-description{
+		font-size: 1rem;
+		color: var(--grey);
+		width: 78%;
 	}
 
 	.button-group{
@@ -243,6 +308,18 @@ padding: 0.5rem 1rem;
 
 	.section-label{
 		font-size: 1rem;
+	}
+
+	.image-container{
+		height: 65vh;
+	}
+
+	.company-grid{
+		grid-template-columns: repeat(4,1fr);
+	}
+
+	.company-title{
+       font-size: 2.3rem;
 	}
 
 }
